@@ -20,14 +20,17 @@ The solar tracker comprises 2 LDR sensors placed at either ends of the panel. Th
 The error obtained is fed into the PID control circuit. The PID control circuit acts as a feedback system that will adjust the panel’s orientation depending on the error calculated. It comprises of 3 operational amplifiers configured to perform proportional, integral and derivative operations.
 
 Proportional: The proportional part gives a gain to the error signal. Here an inverting op amp configuration is used to get the required gain, including variable resistors to adjust the gain of the error to the required value.
+
 ![image](https://github.com/malanban/Solar-Tracker/assets/131769448/eb527fa2-ce37-4225-b22f-29183e6b3cc3)
 
 
 Integral: The integral part reduces the steady state error by accumulating the error over time. An op amp integrator is used for this task with variable resistors. Here the 1Mohm resistor is used in parallel with the capacitor of the integrator to prevent the integration of input offset voltage of the op amp and producing an incorrect output.
+
 ![image](https://github.com/malanban/Solar-Tracker/assets/131769448/f1d9da7d-2172-42df-818f-9ce4aa47319f)
 
 
 Derivative: The derivative component produces the output signal proportional to the rate of change of the error. It reduces the overshoot and smoothens the control signal. An op amp differentiator circuit is used here including variable resistors to adjust the values. There is a resistor series to the capacitor of the differentiator to decrease the effects of noise by decreasing the high frequency gain.
+
 ![image](https://github.com/malanban/Solar-Tracker/assets/131769448/4ef0b8b1-bb0f-4fb6-9d05-ee6942ba1228)
 
 
